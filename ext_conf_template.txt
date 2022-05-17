@@ -1,0 +1,17 @@
+# cat=Login; type=boolean; label=Disable local login: If enabled then local login will be disabled once a user has logged in via Keycloak.
+disableLocalLogin = 1
+
+# cat=Login; type=boolean; label=Create admin: If enabled then each user that is created will be an administrator.
+createAdmin = 1
+
+# cat=Server; type=string; label=The clientId of this application. Must be created in Keycloak. Can be set using the environment variable `NXKEYCLOAK_CLIENTID`
+clientId =
+
+# cat=Server; type=string; label=The clientSecret of this application. Must be created in Keycloak. Can be set using the environment variable `NXKEYCLOAK_CLIENTSECRET_CLIENTID`
+clientSecret =
+
+# cat=Server; type=string; label=The host of the Keycloak server
+host =
+
+# cat=Server; type=string; label=The realm containing user data for this application
+realm =
