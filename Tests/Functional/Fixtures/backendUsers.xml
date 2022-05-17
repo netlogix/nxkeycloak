@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dataset>
+    <be_users>
+        <uid>1652858852</uid>
+        <description>user created by Keycloak</description>
+        <tx_nxkeycloak_identifier>known_identifier_from_keycloak</tx_nxkeycloak_identifier>
+        <email>address_from_keycloak@email.test</email>
+    </be_users>
+    <be_users>
+        <uid>1652858853</uid>
+        <description>existing local user that matches Keycloak user by email</description>
+        <email>local_email@email.test</email>
+    </be_users>
+    <be_users>
+        <uid>1652858854</uid>
+        <description>a local user without connection to keycloak</description>
+        <email>another_local_email@email.test</email>
+    </be_users>
+</dataset>

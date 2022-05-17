@@ -1,0 +1,52 @@
+{
+  "name": "netlogix/nxkeycloak",
+  "description": "TYPO3 extension for logging into the TYPO3 backend using Keycloak",
+  "license": "GPL-2.0-or-later",
+  "type": "typo3-cms-extension",
+  "require": {
+    "php": "^7.4 || ^8.0 || ^8.1",
+    "typo3/cms-core": "^11.5",
+    "typo3/cms-beuser": "^11.5",
+    "league/oauth2-client": "^2.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "Netlogix\\Nxkeycloak\\": "Classes/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Netlogix\\Nxkeycloak\\Tests\\": "Tests/"
+    }
+  },
+  "require-dev": {
+    "ext-sqlite3": "*",
+    "nimut/testing-framework": "^6.0",
+    "nimut/phpunit-merger": "^1.1",
+    "phpunit/phpcov": "^8.2"
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "nxkeycloak",
+      "web-dir": ".Build/Web",
+      "cms-package-dir": "{$vendor-dir}/typo3/cms"
+    }
+  },
+  "config": {
+    "vendor-dir": ".Build/vendor",
+    "bin-dir": ".Build/bin",
+    "allow-plugins": {
+      "typo3/class-alias-loader": true,
+      "typo3/cms-composer-installers": true
+    }
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "@prepare-extension-test-structure",
+      "mkdir --parents .Build/logs/"
+    ],
+    "prepare-extension-test-structure": [
+      "Nimut\\TestingFramework\\Composer\\ExtensionTestEnvironment::prepare"
+    ]
+  }
+}
