@@ -22,7 +22,8 @@
   "require-dev": {
     "ext-sqlite3": "*",
     "nimut/testing-framework": "^6.0",
-    "nimut/phpunit-merger": "^1.1"
+    "nimut/phpunit-merger": "^1.1",
+    "phpunit/phpcov": "^8.2"
   },
   "extra": {
     "typo3/cms": {
